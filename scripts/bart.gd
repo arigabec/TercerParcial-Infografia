@@ -38,5 +38,6 @@ func disminuir_vida(delta):
 	vida = clamp(vida, 0, 60)
 	get_parent().actualizar_vida(int(vida))
 	
-	if(vida <= 0):
+	if vida <= 0:
 		print("PERDISTE")
+		get_tree().change_scene_to_file("res://scenes/perdiste.tscn")

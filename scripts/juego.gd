@@ -17,3 +17,4 @@ func actualizar_score(value):
 
 func actualizar_vida(value):
 	$UI/Vida.text = "Vida: " + str(value)
+	
