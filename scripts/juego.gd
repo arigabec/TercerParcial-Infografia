@@ -1,6 +1,11 @@
 extends Node2D
 
 var score = 0
+var background_music : AudioStreamPlayer
+
+func _ready():
+	background_music = $AudioStreamPlayer
+	background_music.play()
 
 func actualizar_score(value):
 	score += value
