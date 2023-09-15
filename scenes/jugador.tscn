@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgnh5hu7g7w7j"]
+
+[ext_resource type="Script" path="res://scripts/jugador.gd" id="1_lf7pe"]
+[ext_resource type="PackedScene" uid="uid://x3h1lwjgb04k" path="res://scenes/llanta.tscn" id="2_u4vkj"]
+
+[node name="Jugador" type="RigidBody2D" groups=["jugador"]]
+gravity_scale = 15.0
+script = ExtResource("1_lf7pe")
+metadata/_edit_horizontal_guides_ = []
+
+[node name="AgarraLlanta" type="PinJoint2D" parent="."]
+position = Vector2(-151, 84)
+node_a = NodePath("..")
+node_b = NodePath("Llanta")
+
+[node name="Llanta" parent="AgarraLlanta" instance=ExtResource("2_u4vkj")]
+
+[node name="AgarraLlanta2" type="PinJoint2D" parent="."]
+position = Vector2(109, 86)
+node_a = NodePath("..")
+node_b = NodePath("Llanta")
+
+[node name="Llanta" parent="AgarraLlanta2" instance=ExtResource("2_u4vkj")]
+
+[node name="Auto" type="Sprite2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-224, -44, -223, 99, -186, 98, -115, 97, 70, 98, 147, 95, 217, 98, 214, -11, 7, -61, -14, -26, -89, -26, -130, -58, -200, -58)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://x3h1lwjgb04k"]
+
+[ext_resource type="Texture2D" uid="uid://8ftbtvpvtf71" path="res://assets/Wheel.png" id="1_gvltd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4hnkn"]
+radius = 26.0
+
+[node name="Llanta" type="RigidBody2D" groups=["llanta"]]
+gravity_scale = 15.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.19209e-07, 0)
+scale = Vector2(0.398438, 0.390137)
+texture = ExtResource("1_gvltd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4hnkn")
